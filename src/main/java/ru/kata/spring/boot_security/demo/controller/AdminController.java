@@ -7,7 +7,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import ru.kata.spring.boot_security.demo.model.User;
 import ru.kata.spring.boot_security.demo.service.RoleService;
-import ru.kata.spring.boot_security.demo.service.UserDetailsServiceImpl;
 import ru.kata.spring.boot_security.demo.service.UserService;
 
 import javax.validation.Valid;
@@ -21,7 +20,7 @@ public class AdminController {
     private final RoleService roleService;
     private final UserDetailsService userDetailsService;
 
-    public AdminController(UserService userService, RoleService roleService, UserDetailsServiceImpl userDetailsService) {
+    public AdminController(UserService userService, RoleService roleService, UserDetailsService userDetailsService) {
         this.userService = userService;
         this.roleService = roleService;
         this.userDetailsService = userDetailsService;
